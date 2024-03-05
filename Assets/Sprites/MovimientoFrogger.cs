@@ -12,7 +12,12 @@ public class MovimientoFrogger : MonoBehaviour
 
     private Rigidbody2D rb;
     private Transform miTransform;
+    private Animator miAnimator;
 
+    private float timer = 0f;
+    private Vector3 posFin;
+    private float longitudViaje;
+    private float fraccionDelViaje;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +25,26 @@ public class MovimientoFrogger : MonoBehaviour
         mover = Vector3.zero; 
         miTransform = transform;
         rb = GetComponent<Rigidbody2D>();
+        miAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Mover();
+        timer -= Time.deltaTime;
+        if (timer < 0f)
+        {
+            Mover();
+        }
+
+        miTransform.position = Vector3.Lerp(miTransform.position, posFin, fraccionDelViaje);
+
+    }
+
+    private void FixedUpdate()
+    {
+        miAnimator.SetFloat("velocidad_x", mover.x);
+        miAnimator.SetFloat("velocidad_y", mover.y);
     }
 
 
@@ -52,10 +71,19 @@ public class MovimientoFrogger : MonoBehaviour
             mover = new Vector3(mover.x, -1f);
         }
 
-        float movX = Mathf.Lerp(miTransform.position.x, miTransform.position.x + (mover.x * 64) * cantAmp, 64);
-        float movY = Mathf.Lerp(miTransform.position.y, miTransform.position.y + (mover.y * 64) * cantAmp, 64);
+        if (mover != Vector3.zero)
+        {
 
-        miTransform.position = new Vector3(movX, movY);
+            float movX = miTransform.position.x + (mover.x * 64) * cantAmp;
+            float movY = miTransform.position.y + (mover.y * 64) * cantAmp;
 
+            posFin = new Vector3(movX, movY);
+
+            longitudViaje = Vector3.Distance(miTransform.position, posFin);
+
+            fraccionDelViaje = 0.2f / longitudViaje;
+
+            timer = .25f;
+        }        
     }
 }
