@@ -23,7 +23,7 @@ public class CocheScript : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
 
         rb.velocity = Vector3.right * f_vel * Time.fixedDeltaTime + Vector3.up * 0;
