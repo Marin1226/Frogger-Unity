@@ -81,7 +81,9 @@ public class MovimientoFrogger : MonoBehaviour
 
             longitudViaje = Vector3.Distance(miTransform.position, posFin);
 
-            fraccionDelViaje = 0.2f / longitudViaje;
+            fraccionDelViaje = 0.02f / longitudViaje;
+
+            Debug.Log(fraccionDelViaje);
 
             timer = .25f;
         }        
