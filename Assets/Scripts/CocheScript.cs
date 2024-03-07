@@ -29,7 +29,7 @@ public class CocheScript : MonoBehaviour
         rb.velocity = Vector3.right * f_vel * Time.fixedDeltaTime + Vector3.up * 0;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == s_tagWall)
         {
