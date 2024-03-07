@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 76132294}
   m_Layer: 0
   m_Name: tortuga  (4)
-  m_TagString: Untagged
+  m_TagString: tortuga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,7 +233,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 0.56}
+  m_Size: {x: 1.4, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &76132297
 Animator:
@@ -416,9 +416,10 @@ GameObject:
   - component: {fileID: 252001552}
   - component: {fileID: 252001551}
   - component: {fileID: 252001550}
+  - component: {fileID: 252001553}
   m_Layer: 0
   m_Name: agua
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,6 +512,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &252001553
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252001549}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 3.2}
+    newSize: {x: 10.24, y: 3.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.24, y: 3.2}
+  m_EdgeRadius: 0
 --- !u!1 &253418631
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +649,7 @@ GameObject:
   - component: {fileID: 288040114}
   m_Layer: 0
   m_Name: coche 2
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -855,7 +901,7 @@ GameObject:
   - component: {fileID: 372983481}
   m_Layer: 0
   m_Name: coche 3 (2)
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -946,7 +992,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96, y: 0.6}
+  m_Size: {x: 0.93, y: 0.59}
   m_EdgeRadius: 0
 --- !u!212 &372983484
 SpriteRenderer:
@@ -1123,7 +1169,7 @@ GameObject:
   - component: {fileID: 545754834}
   m_Layer: 0
   m_Name: tortuga  (1)
-  m_TagString: Untagged
+  m_TagString: tortuga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1217,7 +1263,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 0.56}
+  m_Size: {x: 1.4, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &545754837
 Animator:
@@ -1406,7 +1452,7 @@ GameObject:
   - component: {fileID: 587276059}
   m_Layer: 0
   m_Name: coche 4 (2)
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1497,7 +1543,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96, y: 0.6}
+  m_Size: {x: 0.93, y: 0.59}
   m_EdgeRadius: 0
 --- !u!212 &587276062
 SpriteRenderer:
@@ -1657,7 +1703,7 @@ GameObject:
   - component: {fileID: 630377868}
   m_Layer: 0
   m_Name: tortuga  (2)
-  m_TagString: Untagged
+  m_TagString: tortuga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1751,7 +1797,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 0.56}
+  m_Size: {x: 1.4, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &630377871
 Animator:
@@ -1856,7 +1902,7 @@ GameObject:
   - component: {fileID: 634605698}
   m_Layer: 0
   m_Name: coche 2 (1)
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1947,7 +1993,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96, y: 0.6}
+  m_Size: {x: 0.94, y: 0.5}
   m_EdgeRadius: 0
 --- !u!212 &634605701
 SpriteRenderer:
@@ -2032,7 +2078,7 @@ GameObject:
   - component: {fileID: 728954096}
   m_Layer: 0
   m_Name: tortuga  (7)
-  m_TagString: Untagged
+  m_TagString: tortuga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2126,7 +2172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 0.56}
+  m_Size: {x: 1.4, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &728954099
 Animator:
@@ -2263,7 +2309,7 @@ GameObject:
   - component: {fileID: 945874488}
   m_Layer: 0
   m_Name: tortuga  (3)
-  m_TagString: Untagged
+  m_TagString: tortuga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2357,7 +2403,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 0.56}
+  m_Size: {x: 1.4, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &945874491
 Animator:
@@ -2462,7 +2508,7 @@ GameObject:
   - component: {fileID: 972904114}
   m_Layer: 0
   m_Name: coche 3 (3)
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2637,7 +2683,7 @@ GameObject:
   - component: {fileID: 978396259}
   m_Layer: 0
   m_Name: coche 4 (1)
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2728,7 +2774,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96, y: 0.6}
+  m_Size: {x: 0.93, y: 0.59}
   m_EdgeRadius: 0
 --- !u!212 &978396262
 SpriteRenderer:
@@ -2790,7 +2836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978396258}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.82, y: -3.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2875,7 +2921,7 @@ GameObject:
   - component: {fileID: 1001704292}
   m_Layer: 0
   m_Name: tortuga  (6)
-  m_TagString: Untagged
+  m_TagString: tortuga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2969,7 +3015,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 0.56}
+  m_Size: {x: 1.4, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &1001704295
 Animator:
@@ -3074,7 +3120,7 @@ GameObject:
   - component: {fileID: 1007109413}
   m_Layer: 0
   m_Name: coche 3 (1)
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3165,7 +3211,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96, y: 0.6}
+  m_Size: {x: 0.94, y: 0.5}
   m_EdgeRadius: 0
 --- !u!212 &1007109416
 SpriteRenderer:
@@ -3277,6 +3323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coche 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1865307655246183181, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
+      propertyPath: m_TagString
+      value: muerte
+      objectReference: {fileID: 0}
     - target: {fileID: 3863870867147796435, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.56
@@ -3333,6 +3383,22 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 988201437}
+    - target: {fileID: 6374888652772914719, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
+      propertyPath: m_Size.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374888652772914719, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
+      propertyPath: m_Size.y
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374888652772914719, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374888652772914719, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.56
+      objectReference: {fileID: 0}
     - target: {fileID: 8107718457740226677, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3791,7 +3857,7 @@ GameObject:
   - component: {fileID: 1637118693}
   m_Layer: 0
   m_Name: coche 4
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3966,7 +4032,7 @@ GameObject:
   - component: {fileID: 1741394721}
   m_Layer: 0
   m_Name: coche 2 (3)
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4218,7 +4284,7 @@ GameObject:
   - component: {fileID: 1785347530}
   m_Layer: 0
   m_Name: coche 4 (3)
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4424,7 +4490,7 @@ GameObject:
   - component: {fileID: 1809811006}
   m_Layer: 0
   m_Name: coche 3 (4)
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4600,7 +4666,7 @@ GameObject:
   - component: {fileID: 1827487664}
   m_Layer: 0
   m_Name: tortuga  (5)
-  m_TagString: Untagged
+  m_TagString: tortuga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4694,7 +4760,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 0.56}
+  m_Size: {x: 1.4, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &1827487667
 Animator:
@@ -4866,7 +4932,7 @@ GameObject:
   - component: {fileID: 2022809108}
   m_Layer: 0
   m_Name: coche 3
-  m_TagString: Untagged
+  m_TagString: muerte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5175,6 +5241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coche 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9101415691883190836, guid: 531d182d6a4eae246870a378bb769b2c, type: 3}
+      propertyPath: m_TagString
+      value: muerte
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5203,6 +5273,10 @@ PrefabInstance:
     - target: {fileID: 5558548185196037720, guid: 3d17973690aaf0643884fdeb18925d7d, type: 3}
       propertyPath: m_Name
       value: coche 1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558548185196037720, guid: 3d17973690aaf0643884fdeb18925d7d, type: 3}
+      propertyPath: m_TagString
+      value: muerte
       objectReference: {fileID: 0}
     - target: {fileID: 9141326734863795419, guid: 3d17973690aaf0643884fdeb18925d7d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5268,12 +5342,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2782092488740670432, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2782092488740670432, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2782092488740670432, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.76
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 2782092488740670432, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07
+      value: -4.51
       objectReference: {fileID: 0}
     - target: {fileID: 2782092488740670432, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5307,9 +5389,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3755442399834863655, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
+      propertyPath: notFrogger.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6245425255249892618, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
       propertyPath: m_Name
       value: frogger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245425255249892618, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7825515619493416034, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
       propertyPath: m_SortingOrder
@@ -5331,6 +5421,18 @@ PrefabInstance:
     - target: {fileID: 1300912604954431957, guid: a46bee526e83b4d40a7e5631282f7a9f, type: 3}
       propertyPath: m_Name
       value: coche 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300912604954431957, guid: a46bee526e83b4d40a7e5631282f7a9f, type: 3}
+      propertyPath: m_TagString
+      value: muerte
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061516201822273671, guid: a46bee526e83b4d40a7e5631282f7a9f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061516201822273671, guid: a46bee526e83b4d40a7e5631282f7a9f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 5290611259106010938, guid: a46bee526e83b4d40a7e5631282f7a9f, type: 3}
       propertyPath: g_opp_truck
@@ -5397,6 +5499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'tortuga '
       objectReference: {fileID: 0}
+    - target: {fileID: 3724269258838372174, guid: 3d51e7221fe7a504291d7cb7afffe731, type: 3}
+      propertyPath: m_TagString
+      value: tortuga
+      objectReference: {fileID: 0}
     - target: {fileID: 5091728854107512938, guid: 3d51e7221fe7a504291d7cb7afffe731, type: 3}
       propertyPath: g_opp_truck
       value: 
@@ -5444,6 +5550,14 @@ PrefabInstance:
     - target: {fileID: 6751463951181630004, guid: 3d51e7221fe7a504291d7cb7afffe731, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154860972308047216, guid: 3d51e7221fe7a504291d7cb7afffe731, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154860972308047216, guid: 3d51e7221fe7a504291d7cb7afffe731, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5510,6 +5624,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: coche 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3496048147513182382, guid: 7e4d8fca2a9f14c42bc95415018d9be3, type: 3}
+      propertyPath: m_TagString
+      value: muerte
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151151789490488764, guid: 7e4d8fca2a9f14c42bc95415018d9be3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151151789490488764, guid: 7e4d8fca2a9f14c42bc95415018d9be3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5526,6 +5652,10 @@ PrefabInstance:
     - target: {fileID: 1865307655246183181, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
       propertyPath: m_Name
       value: coche 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865307655246183181, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
+      propertyPath: m_TagString
+      value: muerte
       objectReference: {fileID: 0}
     - target: {fileID: 3863870867147796435, guid: 01e36b81b4c98b94dafe88eb7f528ead, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5604,17 +5734,17 @@ SceneRoots:
   - {fileID: 7880723136195022489}
   - {fileID: 634605702}
   - {fileID: 1007109417}
-  - {fileID: 978396263}
   - {fileID: 799228488}
   - {fileID: 587276063}
+  - {fileID: 978396263}
   - {fileID: 372983485}
   - {fileID: 5581324065259597854}
   - {fileID: 1139727409}
   - {fileID: 988201437}
   - {fileID: 449878453163075099}
   - {fileID: 1741394725}
-  - {fileID: 972904118}
   - {fileID: 1785347534}
+  - {fileID: 972904118}
   - {fileID: 1044691765}
   - {fileID: 939496238092735703}
   - {fileID: 1809811010}

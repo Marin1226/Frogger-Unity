@@ -64,7 +64,6 @@ public class TortugaScript : CocheScript
             g_opp_truck.GetComponent<SpriteRenderer>().enabled = gameObject.GetComponent<SpriteRenderer>().enabled;
             var clip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
             var tiempo = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-            Debug.Log(gameObject.name+ " " + tiempo + " " + clip.name);
             g_opp_truck.GetComponent<Animator>().Play(clip.name, 0, tiempo);
         }
 
