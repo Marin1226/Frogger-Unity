@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovimientoFrogger : MonoBehaviour
 {
     public float salto; 
     public float velocidad;
+    public bool montado = false;
     public LayerMask notFrogger;
+    public bool muerto = false;
 
     private float cantAmp = 0.01f;
     private Vector3 mover;
@@ -16,12 +19,11 @@ public class MovimientoFrogger : MonoBehaviour
     private Transform miTransform;
     private Animator miAnimator;
     private float timer = 0f;
+    private float timerMuerto = 3f;
     private Vector3 posFin;
     private float longitudViaje;
     private float fraccionDelViaje;
-    private bool montado = false;
-    private bool muerto = false;
-    private GameObject objetoMontar;
+    private bool puedeMorir = true;
 
     // Start is called before the first frame update
     void Start()
@@ -36,26 +38,53 @@ public class MovimientoFrogger : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+
+        if (timerMuerto < 0f)
+        {
+            muerto = false;
+            timerMuerto = 3f;
+            this.gameObject.SetActive(true);
+            miTransform.position = new Vector3(0.219999999f, -4.51000023f, 0);
+        }
+
         if (timer < 0f)
         {
             Mover();
         }
 
-        miTransform.position = Vector3.Lerp(miTransform.position, posFin, fraccionDelViaje);
 
-        ComprobarColision();
+        if (mover != Vector3.zero)
+        {
+            miTransform.position = Vector3.Lerp(miTransform.position, posFin, fraccionDelViaje);
+            miTransform.parent = null;
+            montado = false;
+            rb.velocity = Vector3.zero;
+            puedeMorir = false;
+        } else
+        {
+            puedeMorir = true;
+        }
+
+        if (montado && miTransform.parent != null)
+        {
+            rb.velocity = miTransform.parent.GetComponent<Rigidbody2D>().velocity;
+            if (!miTransform.parent.GetComponent<SpriteRenderer>().enabled)
+            {
+                miTransform.parent = null;
+                montado = false;
+            }
+        }
+
+
+        if (puedeMorir)
+        {
+            ComprobarColision();
+        }
+        
     }
 
     private void FixedUpdate()
     {
-        if (montado)
-        {
-            transform.parent = objetoMontar.transform;
-        }
-        else
-        {
-            transform.parent = null;
-        }
 
         miAnimator.SetFloat("velocidad_x", mover.x);
         miAnimator.SetFloat("velocidad_y", mover.y);
@@ -111,30 +140,40 @@ public class MovimientoFrogger : MonoBehaviour
         Vector3 topRight = new Vector3(bounds.center.x + bounds.extents.x, bounds.center.y + bounds.extents.y);
         Vector3 bottomLeft = new Vector3(bounds.center.x - bounds.extents.x, bounds.center.y - bounds.extents.y);
         var colisiones = Physics2D.OverlapAreaAll(topRight, bottomLeft, notFrogger);
-        Debug.Log(colisiones.Length);
         foreach (var colision in colisiones)
         {
-            Debug.Log(colision);
-            if (colision.CompareTag("tortuga"))
+            if (colision.CompareTag("ganar"))
             {
-                montado = true;
-                objetoMontar = colision.gameObject;
-                return;
-            }
-            else 
-            {
-                montado = false;
+                SceneManager.LoadScene(2);
             }
 
             if (colision.CompareTag("muerte"))
             {
-                if (montado)
+                if (montado || miTransform.parent != null)
                 {
                     return;
                 }
                 miAnimator.SetTrigger("morir");
                 muerto = true;
             }
+
+            Debug.Log(colision.tag);
+            if (colision.CompareTag("carretera"))
+            {
+                montado = false;
+                miTransform.parent = null;
+                return;
+            }
+            if (colision.CompareTag("tortuga"))
+            {
+                if (colision.gameObject.GetComponent<SpriteRenderer>().enabled)
+                {
+                    montado = true;
+                    miTransform.parent = colision.gameObject.transform;    
+                }
+                return;
+            }
+
         }
     }
 

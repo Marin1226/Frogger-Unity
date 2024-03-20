@@ -10,6 +10,9 @@ TagManager:
   - borderRespawn
   - muerte
   - tortuga
+  - carretera
+  - montador
+  - ganar
   layers:
   - Default
   - TransparentFX

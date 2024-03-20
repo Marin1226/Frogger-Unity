@@ -47,7 +47,6 @@ public class TortugaScript : CocheScript
     void Desaparecer()
     {
         GetComponent<SpriteRenderer>().enabled = false;
-        
     }
 
     void Aparecer()

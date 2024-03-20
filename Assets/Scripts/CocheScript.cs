@@ -38,6 +38,16 @@ public class CocheScript : MonoBehaviour
 
         if (collision.tag == "borderRespawn")
         {
+            if (f_vel > 0 && collision.transform.position.x < transform.position.x)
+            {
+                return;
+            }
+
+            if (f_vel < 0 && collision.transform.position.x > transform.position.x)
+            {
+                return;
+            }
+
             gameObject.SetActive(false);
             miTransform.position = respawnPoint.position;
         }
