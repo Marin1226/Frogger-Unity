@@ -6244,6 +6244,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1300912604954431957, guid: a46bee526e83b4d40a7e5631282f7a9f, type: 3}
   m_PrefabInstance: {fileID: 5581324065259597854}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2122413736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2122413737}
+  m_Layer: 0
+  m_Name: RespawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2122413737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122413736}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.22, y: -4.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &449878453163075099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6422,7 +6453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782092488740670432, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.51
+      value: -4.47
       objectReference: {fileID: 0}
     - target: {fileID: 2782092488740670432, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6456,6 +6487,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3755442399834863655, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
+      propertyPath: cantAmp
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755442399834863655, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 2122413737}
     - target: {fileID: 3755442399834863655, guid: 73396fed4aa5a0f4793e0561ab01f042, type: 3}
       propertyPath: notFrogger.m_Bits
       value: 1
@@ -6840,3 +6879,4 @@ SceneRoots:
   - {fileID: 1759616417}
   - {fileID: 1051186507}
   - {fileID: 1191688976}
+  - {fileID: 2122413737}

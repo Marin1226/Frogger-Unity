@@ -6,13 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MovimientoFrogger : MonoBehaviour
 {
-    public float salto; 
-    public float velocidad;
     public bool montado = false;
     public LayerMask notFrogger;
     public bool muerto = false;
 
-    private float cantAmp = 0.01f;
+    public Transform respawnPoint;
+
     private Vector3 mover;
 
     private Rigidbody2D rb;
@@ -43,8 +42,10 @@ public class MovimientoFrogger : MonoBehaviour
         {
             muerto = false;
             timerMuerto = 3f;
+            miTransform.position = respawnPoint.position;
+            rb.velocity = Vector3.zero;
+            mover = Vector3.zero;
             this.gameObject.SetActive(true);
-            miTransform.position = new Vector3(0.219999999f, -4.51000023f, 0);
         }
 
         if (timer < 0f)
@@ -55,12 +56,14 @@ public class MovimientoFrogger : MonoBehaviour
 
         if (mover != Vector3.zero)
         {
-            miTransform.position = Vector3.Lerp(miTransform.position, posFin, fraccionDelViaje);
+            /*
+             miTransform.position = Vector3.Lerp(miTransform.position, posFin, fraccionDelViaje);
             miTransform.parent = null;
             montado = false;
             rb.velocity = Vector3.zero;
-            puedeMorir = false;
-        } else
+            puedeMorir = false;*/
+        }
+        else
         {
             puedeMorir = true;
         }
@@ -85,6 +88,14 @@ public class MovimientoFrogger : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (mover != Vector3.zero)
+        {
+            miTransform.position = Vector3.Lerp(miTransform.position, posFin, fraccionDelViaje);
+            miTransform.parent = null;
+            montado = false;
+            rb.velocity = Vector3.zero;
+            puedeMorir = false;
+        }
 
         miAnimator.SetFloat("velocidad_x", mover.x);
         miAnimator.SetFloat("velocidad_y", mover.y);
@@ -117,14 +128,14 @@ public class MovimientoFrogger : MonoBehaviour
         if (mover != Vector3.zero)
         {
 
-            float movX = miTransform.position.x + (mover.x * 64) * cantAmp;
-            float movY = miTransform.position.y + (mover.y * 64) * cantAmp;
+            float movX = miTransform.position.x + (mover.x * 64) * 0.01f;
+            float movY = miTransform.position.y + (mover.y * 64) * 0.01f;
 
             posFin = new Vector3(movX, movY);
 
             longitudViaje = Vector3.Distance(miTransform.position, posFin);
 
-            fraccionDelViaje = 0.02f / longitudViaje;
+            fraccionDelViaje = 0.09f / longitudViaje;
 
             timer = .25f;
         }        

@@ -10,12 +10,16 @@ public class TortugaScript : CocheScript
     private bool hundido = false;
 
     private Animator animator;
+    private BoxCollider2D boxCollider;
+
+    private string tagTortuga = "tortuga";
 
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -47,11 +51,13 @@ public class TortugaScript : CocheScript
     void Desaparecer()
     {
         GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.tag = "Untagged";
     }
 
     void Aparecer()
     {
         GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.tag = tagTortuga;
     }
 
     public override void OnTriggerEnter2D(Collider2D collision)
